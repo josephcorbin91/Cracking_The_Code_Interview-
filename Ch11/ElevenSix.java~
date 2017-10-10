@@ -1,0 +1,35 @@
+public class ElevenSix{
+ 
+  @Test
+  public void testSort(){
+    sort(new int[][]{{1,4,5},{2,7,9}},2);
+    
+    
+  }
+    public sort(int[][] array, int value){
+      int height = array.length;
+      int width = array[0].length;
+      int currentColumn = height -1;
+      int currentRow =0;
+      while(currentColumn>=0){
+        System.out.println(" i  " + currentRow + " j " + currentColumn + " checking ");
+        if(array[currentRow][currentColumn]==value){
+          System.out.println(" i  " + currentRow + " j " + currentColumn + " value " +array[currentRow][currentColumn]);
+          break;
+        }
+        else if(array[currentRow][currentColumn]>value){
+         currentColumn--;
+        }
+        else{
+        row++;
+        }
+        
+        
+      }
+      System.out.println("Not Found");
+  }
+  
+  
+  
+  
+}
